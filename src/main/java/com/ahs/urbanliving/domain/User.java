@@ -1,5 +1,7 @@
 package com.ahs.urbanliving.domain;
 import jakarta.persistence.*;
+import lombok.Getter;
+
 import java.util.Set;
 
 @Entity
@@ -38,4 +40,25 @@ public class User {
         this.password = password;
         this.roles = roles;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
 }
